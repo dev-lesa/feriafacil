@@ -1,13 +1,6 @@
 # ============================================================
 # FERIAFÁCIL - Sistema de Gestión para Mercado Local
 # ============================================================
-# Universidad Internacional del Ecuador (UIDE)
-# Facultad de Ingenierías Digitales y Tecnologías Emergentes
-# Materia: Lógica de Programación
-# Docente: Ing. Darío Cabezas
-# Estudiante: [Tu Nombre Completo]
-# Fecha: Junio 2026
-# ============================================================
 # Impacto tecnológico:
 # Los vendedores de ferias y mercados locales del Ecuador
 # administran sus negocios con cuadernos y cálculos manuales.
