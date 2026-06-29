@@ -78,7 +78,7 @@ def mostrar_inventario():
 
     # Verificar si el inventario está vacío
     if len(inventario) == 0:
-        print("No hay productos registrados.")
+        print("No hay productos registrados")
         return
 
     # Recorremos el diccionario usando .items() para obtener clave y valor
@@ -118,7 +118,7 @@ def registrar_venta():
 
     # Condicional: verificar si el producto existe en el inventario
     if producto not in inventario:
-        print(f"Error: El producto '{producto}' no existe en el inventario.")
+        print(f"Error: El producto '{producto}' no existe en el inventario")
         return
 
     # Obtenemos los datos del producto del diccionario
@@ -134,12 +134,12 @@ def registrar_venta():
 
     # Condicional: validar que la cantidad sea positiva
     if cantidad <= 0:
-        print("Error: La cantidad debe ser mayor a cero.")
+        print("Error: La cantidad debe ser mayor a cero")
         return
 
     # Condicional: validar que haya suficiente stock
     if cantidad > stock_actual:
-        print(f"Error: Stock insuficiente. Solo hay {stock_actual} unidades disponibles.")
+        print(f"Error: Stock insuficiente. Solo hay {stock_actual} unidades disponibles")
         return
 
     # Proceso: calcular el subtotal de esta venta
@@ -172,8 +172,8 @@ def registrar_venta():
     # Condicional: verificar si quedó poco stock después de la venta
     stock_nuevo = inventario[producto]["stock"]
     if stock_nuevo <= LIMITE_MINIMO:
-        print(f"\n  AVISO: '{producto}' tiene stock bajo ({stock_nuevo} unidades).")
-        print("  Se recomienda reabastecer pronto.")
+        print(f"\n  AVISO: '{producto}' tiene stock bajo ({stock_nuevo} unidades)")
+        print("  Se recomienda reabastecer pronto")
 
 
 # ============================================================
@@ -192,12 +192,12 @@ def agregar_producto():
 
     # Condicional: validar que el nombre no esté vacío
     if nombre == "":
-        print("Error: El nombre del producto no puede estar vacío.")
+        print("Error: El nombre del producto no puede estar vacío")
         return
 
     # Condicional: verificar que el producto no exista ya
     if nombre in inventario:
-        print(f"Error: El producto '{nombre}' ya existe en el inventario.")
+        print(f"Error: El producto '{nombre}' ya existe en el inventario")
         return
 
     # Input: precio con casteo a flotante
@@ -205,7 +205,7 @@ def agregar_producto():
 
     # Condicional: validar que el precio sea positivo
     if precio <= 0:
-        print("Error: El precio debe ser mayor a cero.")
+        print("Error: El precio debe ser mayor a cero")
         return
 
     # Input: stock inicial con casteo a entero
@@ -213,7 +213,7 @@ def agregar_producto():
 
     # Condicional: validar que el stock no sea negativo
     if stock < 0:
-        print("Error: El stock inicial no puede ser negativo.")
+        print("Error: El stock inicial no puede ser negativo")
         return
 
     # Mostrar categorías válidas usando la tupla CATEGORIAS_VALIDAS
@@ -222,7 +222,7 @@ def agregar_producto():
 
     # Condicional: si la categoría no es válida, usar "otros"
     if categoria not in CATEGORIAS_VALIDAS:
-        print("Categoría no reconocida. Se asignará automáticamente 'otros'.")
+        print("Categoría no reconocida. Se asignará automáticamente 'otros'")
         categoria = "otros"
 
     # Agregar el nuevo producto al diccionario
@@ -264,13 +264,13 @@ def buscar_producto():
 
         # Sub-condicional: advertir si el stock está bajo
         if datos["stock"] <= LIMITE_MINIMO:
-            print("  AVISO: Stock bajo. Se recomienda reabastecer.")
+            print("  AVISO: Stock bajo. Se recomienda reabastecer")
         else:
-            print("  Estado: Stock suficiente.")
+            print("  Estado: Stock suficiente")
 
     else:
-        print(f"\nEl producto '{nombre}' no se encontró en el inventario.")
-        print("Revisa el inventario completo con la opción 1.")
+        print(f"\nEl producto '{nombre}' no se encontró en el inventario")
+        print("Revisa el inventario completo con la opción 1")
 
 
 # ============================================================
@@ -296,7 +296,7 @@ def mostrar_alertas():
 
     # Condicional: mensaje cuando no hay alertas
     if not hay_alertas:
-        print("Todos los productos tienen stock suficiente. Sin alertas.")
+        print("Todos los productos tienen stock suficiente. Sin alertas")
 
 
 # ============================================================
@@ -312,7 +312,7 @@ def resumen_del_dia():
 
     # Condicional: verificar si hubo ventas
     if len(ventas_del_dia) == 0:
-        print("No se han registrado ventas durante el día.")
+        print("No se han registrado ventas durante el día")
         return
 
     print(f"Número de transacciones realizadas: {len(ventas_del_dia)}\n")
@@ -382,7 +382,7 @@ print("  Sistema de Gestión para Mercado Local")
 print("  Tecnología al servicio del vendedor")
 print("=" * 50)
 print("\nEste sistema te ayuda a gestionar tu negocio")
-print("de manera digital: inventario, ventas y resumen.")
+print("de manera digital: inventario, ventas y resumen")
 
 # Variable de control del bucle principal (booleano)
 sistema_activo = True
@@ -422,9 +422,9 @@ while sistema_activo:
         print("  CERRANDO SISTEMA - RESUMEN FINAL DEL DÍA")
         print("=" * 50)
         resumen_del_dia()
-        print("\nGracias por usar FeriaFácil.")
-        print("Que tenga excelentes ventas. ¡Hasta pronto!")
+        print("\nGracias por usar FeriaFácil")
+        print("Que tenga excelentes ventas. Hasta pronto!")
         sistema_activo = False
 
     else:
-        print("\nOpción no válida. Por favor ingresa un número del 0 al 7.")
+        print("\nOpción no válida. Por favor ingresa un número del 0 al 7")
